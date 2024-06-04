@@ -1,0 +1,268 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.tela {
+    display: inline-flex;
+    align-items: start;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.documento {
+	display: grid;
+	grid-template-columns: auto auto;
+	flex-direction: column;
+	gap: 2px;
+}
+
+.capa {
+	display: flex;
+	flex-direction: column;
+	
+	width: 531px;
+	height: 778px;
+	
+	padding: 32px;
+	border: 2px solid #00003F;
+	
+	background-image: url(Recursos/capa.png);
+	background-size: cover;
+	
+	position: relative;
+}
+
+.capa-header {
+	color: #3333CC;
+	font-size: 24px;
+	font-family: 'Poppins';
+	font-weight: 700;
+	word-wrap: break-word;
+	
+	margin-top: 2px;
+	margin-left: 4px;
+}
+
+.capa-titulo {
+	position: absolute;
+	color: #3333CC;
+	font-size: 72px;
+	font-family: 'Poppins';
+	font-weight: 700;
+	line-height: 79.20px;
+	word-wrap: break-word;
+	bottom: 84px;
+	left: 32px;
+}
+
+.contracapa {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	width: 531px;
+	height: 778px;
+	
+	padding: 32px;
+	border: 2px solid #00003F;
+	
+	background-color: #3333CC;
+}
+
+.pagina {
+	display: flex;
+	flex-direction: column;
+	
+	width: 531px;
+	height: 778px;
+	
+	padding: 32px;
+	border: 2px solid #00003F;
+	
+	background-image: url(Recursos/marca-dagua.png);
+	background-size: cover;
+	
+	position: relative;
+}
+
+.header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.titulo {
+	color: #3333CC;
+	font-size: 16px;
+	font-family: 'Poppins';
+	font-weight: 700;
+	margin-top: 1px;
+}
+
+.conteudo {
+	margin-top: 32px;
+	gap: 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+.rodape {
+	position: absolute;
+	right: 32px;
+	bottom: 20px;
+	color: #00003F;
+	font-size: 12px;
+	font-family: 'Poppins';
+	font-weight: 400;
+	word-wrap: break-word;
+	text-align: right;
+}
+
+.texto {
+	text-align: justify;
+	color: #00003F;
+	font-size: 12px;
+	font-family: 'Poppins';
+	font-weight: 400;
+	word-wrap: break-word;
+}
+
+.texto-semibold {
+	color: #00003F;
+	font-size: 12px;
+	font-family: 'Poppins';
+	font-weight: 600;
+}
+
+.texto-bold {
+	color: #00003F;
+	font-size: 12px;
+	font-family: 'Poppins';
+	font-weight: 700;
+}
+
+.texto-sumir {
+	opacity: 0;
+}
+
+.assinatura-cliente {
+	margin-top: 60px;
+}
+
+.assinaturas {
+	margin-top: 80px;
+	
+	display: flex;
+	flex-direction: row;
+	gap: 72px;
+}
+
+.a-div {
+	width: 198px;
+	height: 1px;
+	
+	background-color: #00003F;
+	
+	margin-bottom: 5px;
+}
+
+.a-modelo {
+	display: flex;
+	flex-direction: column;
+	
+	position: relative;
+}
+
+.svg-diretor {
+	position: absolute;
+	left: 39px;
+	top: -54px;
+}
+
+.svg-gerente {
+	position: absolute;
+	left: 51px;
+	top: -27px;
+}
+
+.selos {
+	position: absolute;
+	right: 80px;
+	bottom: 200px;
+	z-index: 1;
+}
+
+.selo {
+	width: 185px;
+}
+
+.config {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 300px;
+    border-left: solid 1px;
+    border-color: #808080;
+    padding-left: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.ocultar-na-impressao {
+    display: none !important;
+}
+
+.config-container {
+	min-width: 262px;
+    padding: 18px;
+    border: 1px solid #888888;
+    border-radius: 10px;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.config-titulo {
+    font-family: 'Poppins';
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    font-weight: 600;
+}
+
+.input-config {
+    height: 28px;
+    
+    background-color: #E8DEF8;
+    border-radius: 6px;
+    border: 1px solid #79747E;
+    
+    font-weight: 600;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #333;
+    
+    padding: 10px 18px;
+	
+	overflow: hidden; /* esconde qualquer conteúdo que ultrapasse a largura */
+    white-space: nowrap; /* faz com que o texto não quebre para a próxima linha */
+    text-overflow: ellipsis; /* adiciona "..." para indicar que o texto foi truncado */
+}
+
+#botao-imprimir {
+    background-color: #4CAF50; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Padding */
+    margin: 10px 0; /* Margem */
+    border: none; /* Sem borda */
+    cursor: pointer; /* Cursor como ponteiro */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-weight: 600;
+    font-family: 'Poppins';
+    font-size: 16px;
+	max-height: 45px;
+	max-width: 300px;
+}
