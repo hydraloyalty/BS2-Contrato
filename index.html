@@ -97,7 +97,7 @@
 					<div class="texto"><span class="texto-semibold">Data de Emissão: </span><span id="dia">[DD]</span> de <span id="mes">[MM]</span> de <span id="ano">[AAAA]</span>.</div>
 				</div>
 				
-				<div class="selos">
+				<div class="selos" id="selo">
 					<img src="Recursos/selo.png" class="selo" alt="Selo">
 				</div>
 				
@@ -111,13 +111,13 @@
 				
 				<div class="assinaturas">
 					<div class="a-modelo">
-						<img src="Recursos/diretor.svg" class="svg-diretor" alt="Assinatura do Diretor">
+						<img src="Recursos/diretor.svg" class="svg-diretor" alt="Assinatura do Diretor" id="a-diretor">
 						<div class="a-div"></div>
 						<div class="texto">Giuseppe Paternostro</div>
 						<div class="texto-bold">DIRETOR EXECUTIVO | Banco BS2</div>
 					</div>
 					<div class="a-modelo">
-						<img src="Recursos/gerente.svg" class="svg-gerente" alt="Assinatura do Gerente">
+						<img src="Recursos/gerente.svg" class="svg-gerente" alt="Assinatura do Gerente" id="a-gerente">
 						<div class="a-div"></div>
 						<div class="texto" id="gerente">[GERENTE]</div>
 						<div class="texto-bold">GERENTE DE CRÉDITO | Banco BS2</div>
@@ -131,7 +131,7 @@
 				<img src="Recursos/logo-alternativa.svg" alt="Logo do Banco">
 			</div>
 		</div>
-		<div class="config" class="ocultar-na-impressao" id="config">
+		<div class="config" class="ocultar-na-impressao" id="config">		
 			<div class="config-container">
 				<div class="config-titulo">Dados do Documento</div>
 				<input type="text" class="input-config" id="i-gerente" placeholder="Gerente" required>
@@ -154,8 +154,11 @@
 				<input type="number" class="input-config" id="i-carencia" placeholder="Prazo de Carência" required>
 			</div>
 			
-			<button id="botao-imprimir" disabled>EXPORTAR</button>
-		
+			<button class="botao-desabilitado" id="botao-imprimir">EXPORTAR</button>
+			
+			<button id="minuta" class="minuta-desabilitado">
+				<img src="Recursos/download.svg" alt="Download" style="width: 24px;">BAIXAR MINUTA
+			</button>
 		</div>
 	</div>
 	<script src="Scripts/cnpj.js"></script>
@@ -164,6 +167,7 @@
 	<script src="Scripts/datas.js"></script>
 	<script src="Scripts/inputs.js"></script>
 	<script src="Scripts/titulo.js"></script>
+	<script src="Scripts/minuta.js"></script>
 </body>
 	
 </html>

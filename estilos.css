@@ -252,8 +252,40 @@
     text-overflow: ellipsis; /* adiciona "..." para indicar que o texto foi truncado */
 }
 
-#botao-imprimir {
+.botao-desabilitado {
+    background-color: #2A2A2A; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Padding */
+    margin: 10px 0; /* Margem */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-weight: 600;
+    font-family: 'Poppins';
+    font-size: 16px;
+	max-height: 45px;
+	max-width: 300px;
+	
+	cursor: pointer;
+}
+
+.botao-habilitado {
     background-color: #4CAF50; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Padding */
+    margin: 10px 0; /* Margem */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-weight: 600;
+    font-family: 'Poppins';
+    font-size: 16px;
+	max-height: 45px;
+	max-width: 300px;
+	
+	cursor: pointer; /* Cursor como ponteiro */
+}
+
+.minuta-habilitado {
+	background-color: #3333CC; /* Cor de fundo */
     color: white; /* Cor do texto */
     padding: 10px 20px; /* Padding */
     margin: 10px 0; /* Margem */
@@ -265,4 +297,35 @@
     font-size: 16px;
 	max-height: 45px;
 	max-width: 300px;
+	
+	display: flex;
+	flex-direction: row;
+	gap: 5px;
+	align-items: center;
+	justify-content: center;
+	
+	cursor: pointer;
+}
+
+.minuta-desabilitado {
+	background-color: #2A2A2A; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Padding */
+    margin: 10px 0; /* Margem */
+    border: none; /* Sem borda */
+    cursor: pointer; /* Cursor como ponteiro */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-weight: 600;
+    font-family: 'Poppins';
+    font-size: 16px;
+	max-height: 45px;
+	max-width: 300px;
+	
+	display: flex;
+	flex-direction: row;
+	gap: 5px;
+	align-items: center;
+	justify-content: center;
+	
+	cursor: pointer;
 }
