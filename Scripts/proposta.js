@@ -13,13 +13,13 @@ function formatValue(value) {
         function calcular() {
             const iValor = document.getElementById('i-valor').value;
             const iParcelas = document.getElementById('i-parcelas').value;
-			const iCarencia = document.getElementById('i-carencia').value;
+            const iCarencia = document.getElementById('i-carencia').value;
 
             const m2 = parseFloat(formatValue(iValor)) || 0;
             const n2 = parseInt(iParcelas) || 0;
             const o2 = 0.0075; // 0,75%
-			
-			document.getElementById('prazo-carencia').innerText = iCarencia;
+
+            document.getElementById('prazo-carencia').innerText = iCarencia;
 
             if (n2 > 0) {
                 const p2 = m2 * (o2 / (1 - Math.pow(1 + o2, -n2)));
@@ -41,7 +41,12 @@ function formatValue(value) {
                 document.getElementById('taxa-juros').innerText = '';
             }
         }
-		
-        document.getElementById('i-valor').addEventListener('input', calcular);
+
+        document.getElementById('i-valor').addEventListener('input', function(e) {
+            // Remove any non-numeric characters
+            e.target.value = e.target.value.replace(/[^\d]/g, '');
+            calcular();
+        });
+
         document.getElementById('i-parcelas').addEventListener('input', calcular);
-		document.getElementById('i-carencia').addEventListener('input', calcular);
+        document.getElementById('i-carencia').addEventListener('input', calcular);
